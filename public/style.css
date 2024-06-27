@@ -5,13 +5,14 @@
 
 body {
     margin: 0;
+    font-family: SamsungOne, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 32px;
 }
 
 #promo {
     background-color: #1b2d6b;
     color: white;
-    font-family: SamsungOne, Arial, Helvetica, sans-serif;
-    font-size: 14px;
     font-weight: 400;
     width: 100%;
     padding: 0;
@@ -32,13 +33,66 @@ body {
     font-size: 24px;
 }
 
-
-header {
-    display: flexbox;
+#header-container {
+    background-color: white;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 80px;
 }
 
-#nav
+header {
+    margin: 0 auto;
+    padding: 0 16px;
+    max-width: 1440px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-.nav li {
-    display: inline-block
+#logo {
+    margin-right: 64px;
+    align-items: center;
+}
+
+#logo:hover {
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+nav div {
+    display: flex;
+}
+
+.nav-item {
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+.nav-item:hover {
+    background-color: black;
+    color: white;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+#utility {
+    margin-left: 28px;
+    display: flex;
+    color:#1b2d6b;
+}
+
+span {
+    padding: 0 8px;
+    color: black;
+}
+
+span:hover {
+    cursor: pointer;
 }
