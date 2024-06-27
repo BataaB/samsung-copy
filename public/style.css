@@ -1,0 +1,44 @@
+@font-face {
+    font-family: SamsungOne;
+    src: url(SamsungOne-400.ttf);
+}
+
+body {
+    margin: 0;
+}
+
+#promo {
+    background-color: #1b2d6b;
+    color: white;
+    font-family: SamsungOne, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    position: relative;
+}
+
+#promo a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#x {
+    position: absolute;
+    top: 13px;
+    right: 54px;
+    font-size: 24px;
+}
+
+
+header {
+    display: flexbox;
+}
+
+#nav
+
+.nav li {
+    display: inline-block
+}
