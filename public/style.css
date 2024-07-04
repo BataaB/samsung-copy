@@ -1,98 +1,66 @@
-@font-face {
-    font-family: SamsungOne;
-    src: url(SamsungOne-400.ttf);
+* {
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    font-family: SamsungOne, Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    line-height: 32px;
 }
 
-#promo {
-    background-color: #1b2d6b;
-    color: white;
-    font-weight: 400;
-    width: 100%;
-    padding: 0;
-    text-align: center;
-    position: relative;
-}
-
-#promo a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-#x {
-    position: absolute;
-    top: 13px;
-    right: 54px;
-    font-size: 24px;
-}
-
-#header-container {
+/* Header Section */
+#header-section {
     background-color: white;
-    width: 100%;
-    margin: 0;
-    padding: 0;
     height: 80px;
 }
 
-header {
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 16px;
-    max-width: 1440px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
-#logo {
-    margin-right: 64px;
-    align-items: center;
-}
-
-#logo:hover {
-    cursor: pointer;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-nav div {
+.header-left {
     display: flex;
 }
 
-.nav-item {
-    font-weight: bold;
+.header-right {
+    display: flex;
+}
+
+.logo  {
+    margin: auto 64px auto 0;
+}
+
+.nav > ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.nav li {
     padding: 0 8px;
+    line-height: 32px;
 }
 
-.nav-item:hover {
+.nav li:hover {
     background-color: black;
     color: white;
     border-radius: 16px;
     cursor: pointer;
 }
 
-#utility {
-    margin-left: 28px;
+#utility { 
     display: flex;
-    color:#1b2d6b;
+    align-items: center;
+    gap: 8px;
+    margin-left: 28px;
 }
 
-span {
-    padding: 0 8px;
-    color: black;
+#utility > * {
+    padding: 8px;
 }
 
-span:hover {
-    cursor: pointer;
-}
+/* Hero Section */

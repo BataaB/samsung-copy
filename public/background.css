@@ -1,0 +1,92 @@
+body {
+    background-color: aqua;
+}
+
+/* Backgrounds */
+#hero-panel-galaxy-ai {
+    background-image: url(images/hero/galaxy-ai.webp);
+}
+
+#hero-panel-galaxy-s24 {
+    background-image: url(images/hero/galaxy-s24.webp);
+}
+
+#hero-panel-q80c {
+    background-image: url(images/hero/q80c.webp);
+}
+
+#hero-panel-oled {
+    background-image: url(images/hero/oled.webp);
+}
+
+#hero-panel-bespoke {
+    background-image: url(images/hero/bespoke.webp);
+}
+
+#hero-panel-vip {
+    background-image: url(images/hero/vip.webp);
+}
+
+#offers-section-mobile-unfold {
+    background-image: url(images/offers/mobile/unfold.avif);
+}
+
+#exclusive-offer-section {
+    background-image: url(images/exclusive-offer/background.webp);
+}
+
+#mobile-computing-panel-ultra {
+    background-image: url(images/mobile-computing/ultra.avif);
+}
+
+#mobile-computing-panel-plus {
+    background-image: url(images/mobile-computing/plus.avif);
+}
+
+#mobile-computing-panel-book {
+    background-image: url(images/mobile-computing/book.avif);
+}
+
+#mobile-computing-panel-tab {
+    background-image: url(images/mobile-computing/tab.avif);
+}
+
+#mobile-computing-panel-watch {
+    background-image: url(images/mobile-computing/watch.avif);
+}
+
+#tv-audio-panel-qn90c {
+    background-image: url(images/tv-audio/qn90c.avif);
+}
+
+#tv-audio-panel-qn90d {
+    background-image: url(images/tv-audio/qn90d.avif);
+}
+
+#tv-audio-panel-q990d {
+    background-image: url(images/tv-audio/q990d.avif);
+}
+
+#home-appliances-panel-deals {
+    background-image: url(images/home-appliances/deals.avif);
+}
+
+#home-appliances-panel-refrigerators {
+    background-image: url(images/home-appliances/refrigerators.avif);
+}
+
+#home-appliances-panel-laundry {
+    background-image: url(images/home-appliances/laundry.avif);
+}
+
+#home-appliances-panel-ai-laundry {
+    background-image: url(images/home-appliances/ai-laundry.avif);
+}
+
+#sustainability-panel-renew {
+    background-image: url(images/sustainability/renew.avif);
+}
+
+#sustainability-panel-recycle {
+    background-image: url(images/sustainability/recycle.avif);
+}
