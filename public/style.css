@@ -1,6 +1,27 @@
+@font-face {
+    font-family: SamsungOne;
+    src: url(fonts/SamsungOne/SamsungOne-400.ttf);
+}
+@font-face {
+    font-family: SamsungOne-Bold;
+    src: url(fonts/SamsungOne/SamsungOne-700.ttf);
+}
+@font-face {
+    font-family: SamsungSharpSans;
+    src: url(fonts/SamsungSharpSans/samsungsharpsans.otf);
+}
+@font-face {
+    font-family: SamsungSharpSans-Bold;
+    src: url(fonts/SamsungSharpSans/samsungsharpsans-bold.otf);
+}
+
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+.removed { display: none; }
 
 body {
     margin: 0;
@@ -36,13 +57,18 @@ body {
 
 .nav > ul {
     display: flex;
+    align-items: center;
     list-style: none;
     padding: 0;
+    height: 100%;
 }
 
 .nav li {
     padding: 0 8px;
     line-height: 32px;
+
+    font-family: SamsungOne-Bold, Arial, Helvetica, sans-serif;
+    font-size: 14px;
 }
 
 .nav li:hover {
@@ -64,3 +90,865 @@ body {
 }
 
 /* Hero Section */
+#hero-section {
+    height: 640px; /* For now */
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    color: white;
+}
+
+#hero-panel-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.hero-panel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    z-index: 0;
+    transition: all 1s;
+}
+
+.hero-panel:nth-child(1){
+    opacity: 1;
+    z-index: 1;
+}
+
+#hero-panel-q80c,
+#hero-panel-oled {
+    color: black;
+}
+
+.hero-panel-desc-container {
+    position: absolute;
+    width: 620px;
+    left: 88px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero-panel-desc-container-right {
+    position: absolute;
+    width: 620px;
+    right: 88px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero-panel-tag {
+    font-family: SamsungOne-Bold, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.33;
+    margin: 0;
+    margin-bottom: 16px;
+}
+
+.hero-panel-title {
+    font-family: SamsungSharpSans-Bold, Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.hero-panel-desc {
+    font-family: SamsungOne, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.33;
+    margin: 0;
+    margin-top: 24px;
+}
+
+.hero-panel-button-container {
+    margin-top: 40px;
+}
+
+.hero-panel-button {
+    color: white;
+    font-family: SamsungOne-Bold, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 19px;
+    background-color: black;
+    text-decoration: none;
+    padding: 10px 24px 11px 24px;
+    border-radius: 20px;
+    transition: all 100ms;
+}
+
+.white-button a {
+    background-color: white;
+    color: black;
+}
+
+.hero-panel-button:hover {
+    opacity: 0.6;
+}
+
+#hero-section-prev-container {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+#hero-section-next-container {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.hero-section-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-section-button:hover {
+    cursor: pointer;
+}
+
+/* Offers Section */
+#offers-section {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+#offers-section-title-container {
+    padding-top: 48px;
+    padding-bottom: 11px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    align-items: center;
+}
+
+#offers-section-title {
+    text-align: center;
+}
+
+#offers-section-title h2 {
+    font-size: 38px;
+    font-family: SamsungSharpSans-Bold, Arial, Helvetica, sans-serif;
+    line-height: 1.2;
+}
+
+#offers-section-title-link {
+    text-align: center;
+}
+
+#offers-section-title-link a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 0 11px 0;
+
+    font-size: 18px;
+    font-family: SamsungOne-Bold, Arial, Helvetica, sans-serif;
+    line-height: 19px;
+}
+
+#offers-section-offers-container {
+    padding-bottom: 48px;
+}
+
+#offers-section-tabs {
+    height: 58px;
+    display: flex;
+    justify-content: center;
+}
+
+#offers-section-tabs ul {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+
+    list-style: none;
+}
+
+#offers-section-tabs button {
+    background: 0;
+    border: 0;
+
+    font-size: 18px;
+    font-family: SamsungOne-Bold, Arial, Helvetica, sans-serif;
+}
+
+.offers-section-panel-container {
+    height: 708px;
+
+    display: flex;
+    overflow: hidden;
+}
+
+.offers-section-panel {
+    width: 100%;
+    height: 100%;
+
+    flex-shrink: 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 24px;
+}
+
+.offers-section-card {
+    width: 100%;
+    background-color: #f4f4f4;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.offers-section-card img {
+    width: 44%;
+    mix-blend-mode: multiply;
+}
+
+.offers-section-card h2 {
+    font-size: 18px;
+    font-family: SamsungOne, Arial, Helvetica, sans-serif;
+}
+
+.offers-section-card a {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 24px 11px 24px;
+    border-radius: 20px;
+
+    font-size: 14px;
+    font-family: SamsungOne-Bold, Arial, Helvetica, sans-serif;
+}
+.offers-section-card a:hover {
+    background-color: #555;
+}
+
+/* Exclusive Offer Section */
+#exclusive-offer-section {
+    max-width: 1440px;
+    height: 350px;
+    margin: 0 auto;
+    padding-inline: 88px;
+    position: relative;
+}
+
+#exclusive-offer-desc-container {
+    width: 572px;
+    height: 240px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.exclusive-offer-tag {
+    margin-bottom: 16px;
+    font-size: 14px;
+    font-family: SamsungOne-Bold, Arial, Helvetica, sans-serif;
+}
+
+.exclusive-offer-title {
+    margin-bottom: 16px;
+    font-size: 48px;
+    font-family: SamsungSharpSans-Bold, Arial, Helvetica, sans-serif;
+}
+
+.exclusive-offer-desc {
+    font-size: 18px;
+    font-family: SamsungOne, Arial, Helvetica, sans-serif;
+}
+
+.exclusive-offer-button {
+    margin-top: 40px;
+    padding: 10px 24px 11px 24px;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 8px;
+
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: SamsungOne-Bold, Arial, Helvetica, sans-serif;
+}
+
+/* Mobile & Computing Section */
+#mobile-computing-section {
+    max-width: 1440px;
+    height: 810px;
+    margin: 0 auto;
+    position: relative;
+
+    background-color: aquamarine;
+}
+
+#mobile-computing-section-title-container {
+    position: absolute;
+    width: 100%;
+    top: 48px;
+    text-align: center;
+
+    z-index: 1;
+}
+
+#mobile-computing-section-title {
+    font-size: 38px;
+    font-family: SamsungSharpSans-Bold, Arial, Helvetica, sans-serif;
+}
+
+#mobile-computing-section-tabs ul {
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    list-style: none;
+}
+
+.mobile-computing-section-tab {
+    background: 0;
+    border: 0;
+
+    font-size: 18px;
+    font-family: SamsungOne-Bold, Arial, Helvetica, sans-serif;
+}
+
+.mobile-computing-panel-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.mobile-computing-panel {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.mobile-computing-panel-desc-container {
+    position: absolute;
+    bottom: 48px;
+
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+}
+
+.mobile-computing-panel-title {
+    position: absolute;
+    bottom: 72px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 48px;
+    font-family: SamsungSharpSans-Bold, Arial, Helvetica, sans-serif;
+}
+
+.mobile-computing-panel-desc {
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 18px;
+    font-family: SamsungOne, Arial, Helvetica, sans-serif;
+}
+
+.mobile-computing-panel-button {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 24px 11px 24px;
+    border-radius: 20px;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 14px;
+    font-family: SamsungOne-Bold, Arial, Helvetica, sans-serif;
+}
+
+/* TV & Audio Section */
+#tv-audio-section {
+    max-width: 1440px;
+    height: 810px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#tv-audio-section-title-container {
+    position: absolute;
+    width: 100%;
+    top: 48px;
+    text-align: center;
+
+    z-index: 1;
+}
+
+#tv-audio-section-title {
+    font-size: 38px;
+    font-family: SamsungSharpSans-Bold, Arial, Helvetica, sans-serif;
+}
+
+#tv-audio-section-tabs ul {
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    list-style: none;
+}
+
+.tv-audio-section-tab {
+    background: 0;
+    border: 0;
+
+    font-size: 18px;
+    font-family: SamsungOne-Bold, Arial, Helvetica, sans-serif;
+}
+
+.tv-audio-panel-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.tv-audio-panel {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.tv-audio-panel-desc-container {
+    position: absolute;
+    bottom: 48px;
+
+    width: 100%;
+    height: 130px;
+    text-align: center;
+}
+
+.tv-audio-panel-title {
+    position: absolute;
+    bottom: 72px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 48px;
+    font-family: SamsungSharpSans-Bold, Arial, Helvetica, sans-serif;
+}
+
+.tv-audio-panel-desc {
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 18px;
+    font-family: SamsungOne, Arial, Helvetica, sans-serif;
+}
+
+.tv-audio-panel-button {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 24px 11px 24px;
+    border-radius: 20px;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 14px;
+    font-family: SamsungOne-Bold, Arial, Helvetica, sans-serif;
+}
+
+/* Home Appliances Section */
+#home-appliances-section {
+    max-width: 1440px;
+    height: 810px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#home-appliances-section-title-container {
+    position: absolute;
+    width: 100%;
+    top: 48px;
+    text-align: center;
+
+    z-index: 1;
+}
+
+#home-appliances-section-title {
+    font-size: 38px;
+    font-family: SamsungSharpSans-Bold, Arial, Helvetica, sans-serif;
+}
+
+#home-appliances-section-tabs ul {
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    list-style: none;
+}
+
+.home-appliances-section-tab {
+    background: 0;
+    border: 0;
+
+    font-size: 18px;
+    font-family: SamsungOne-Bold, Arial, Helvetica, sans-serif;
+}
+
+.home-appliances-panel-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.home-appliances-panel {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.home-appliances-panel-desc-container {
+    position: absolute;
+    bottom: 48px;
+
+    width: 100%;
+    height: 130px;
+    text-align: center;
+}
+
+.home-appliances-panel-title {
+    position: absolute;
+    bottom: 72px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 48px;
+    font-family: SamsungSharpSans-Bold, Arial, Helvetica, sans-serif;
+}
+
+.home-appliances-panel-desc {
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 18px;
+    font-family: SamsungOne, Arial, Helvetica, sans-serif;
+}
+
+.home-appliances-panel-button {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 24px 11px 24px;
+    border-radius: 20px;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 14px;
+    font-family: SamsungOne-Bold, Arial, Helvetica, sans-serif;
+}
+
+/* Sustainability Section */
+#sustainability-section {
+    max-width: 1440px;
+    height: 810px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#sustainability-section-title-container {
+    position: absolute;
+    width: 100%;
+    top: 48px;
+    text-align: center;
+
+    z-index: 1;
+}
+
+#sustainability-section-title {
+    font-size: 38px;
+    font-family: SamsungSharpSans-Bold, Arial, Helvetica, sans-serif;
+}
+
+#sustainability-section-tabs ul {
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    list-style: none;
+}
+
+.sustainability-section-tab {
+    background: 0;
+    border: 0;
+
+    font-size: 18px;
+    font-family: SamsungOne-Bold, Arial, Helvetica, sans-serif;
+}
+
+.sustainability-panel-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.sustainability-panel {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.sustainability-panel-desc-container {
+    position: absolute;
+    bottom: 48px;
+
+    width: 100%;
+    height: 130px;
+    text-align: center;
+}
+
+.sustainability-panel-title {
+    position: absolute;
+    bottom: 72px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 48px;
+    font-family: SamsungSharpSans-Bold, Arial, Helvetica, sans-serif;
+}
+
+.sustainability-panel-desc {
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 18px;
+    font-family: SamsungOne, Arial, Helvetica, sans-serif;
+}
+
+.sustainability-panel-button {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 24px 11px 24px;
+    border-radius: 20px;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 14px;
+    font-family: SamsungOne-Bold, Arial, Helvetica, sans-serif;
+}
+
+/* Footer Section */
+#footer-section {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+#footer-privacy {
+    width: 100%;
+    padding: 20px 0;
+    border-top: 1px solid #d9d9d9;
+}
+
+#footer-privacy-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    font-family: SamsungOne, Arial, Helvetica, sans-serif;
+    line-height: 1.15;
+}
+
+#footer-privacy-text-container h2 {
+    color: #252525;
+    padding-left: 1.66vw;
+    font-size: 14px;
+    font-family: SamsungSharpSans-Bold, Arial, Helvetica, sans-serif;
+}
+
+#footer-privacy-text-container p {
+    padding-left: 2%;
+    font-size: 14px;
+}
+
+#footer-privacy-text-container a {
+    color: #252525;
+    padding: 0 20px;
+    font-family: SamsungOne-Bold, Arial, Helvetica, sans-serif;
+}
+
+#footer-column {
+    display: flex;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    height: 748px;
+}
+
+#footer-column > * {
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #d9d9d9;
+    padding-bottom: 32px;
+}
+#footer-column:last-child {
+    border-right: none;
+}
+
+#footer-column h3 {
+    padding: 16px 24px;
+    font-size: 18px;
+    font-family: SamsungOne, Arial, Helvetica, sans-serif;
+    line-height: 1.33;
+    text-transform: uppercase;
+}
+
+#footer-column li {
+    list-style: outside none none;
+}
+#footer-column a {
+    padding: 7px 24px;
+    font-size: 14px;
+    font-family: SamsungOne, Arial, Helvetica, sans-serif;
+    line-height: 1.33;
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+#footer-column a:hover {
+    color: #1428a0;
+    text-decoration: underline;
+}
+
+#footer-column img {
+    position: relative;
+    top: 4px;
+}
+
+#footer-about-us { margin-top: 16px; }
+
+#footer-copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+#footer-copyright-container {
+    padding: 17px 12px 15px 24px;
+    font-size: 12px;
+    font-family: SamsungOne, Arial, Helvetica, sans-serif;
+    line-height: 1.33;
+}
+
+#footer-copyright-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 16px 24px 16px 12px;
+}
+
+.footer-copyright-logo img {
+    max-width: 188px;
+}
+
+#footer-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+
+#footer-footer-left {
+    display: flex;
+}
+
+#footer-footer-language {
+    padding-inline: 24px;
+}
+
+#footer-footer-language a {
+    font-size: 12px;
+    font-family: SamsungOne-Bold, Arial, Helvetica, sans-serif;
+    line-height: 1.33;
+    color: black;
+    text-decoration: none;
+}
+
+#footer-footer-terms-list ul {
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    gap: 24px;
+}
+
+#footer-footer-terms-list li {
+    list-style: none;
+}
+
+#footer-footer-terms-list a {
+    color: black;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: SamsungOne, Arial, Helvetica, sans-serif;
+    line-height: 1.33;
+}
+
+#footer-footer-sns {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 24px;
+}
+
+#footer-footer-sns-title {
+    font-size: 12px;
+    font-family: SamsungOne, Arial, Helvetica, sans-serif;
+    line-height: 1.33;
+}
+
+#footer-footer-sns-list {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}

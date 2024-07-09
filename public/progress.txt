@@ -1,0 +1,27 @@
+Samsung: 
+[ ] Promo Banner
+    [ ] HTML
+    [ ] Style
+    [ ] Responsive
+    [ ] Close button
+[ ] Header
+    [ ] HTML
+    [ ] Style
+    [ ] Responsive
+    [ ] Pop ups
+        [ ] HTML
+        [ ] Style
+[ ] Hero Section
+    [ ] Next & Prev Button
+    [ ] Autoslide
+    [ ] Slider tabs
+[ ] Offers Section
+[ ] Exclusive Offer
+[ ] Mobile & Computing
+[ ] TV & Audio
+[ ] Home Appliances
+[ ] Sustainability
+[ ] Stories
+[ ] Search Section
+[ ] Disclosures
+[ ] Footer

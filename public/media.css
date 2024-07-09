@@ -1,0 +1,47 @@
+body {
+    background-color: #F39F18;
+}
+
+#device {
+    text-align: center;
+    color: white;
+}
+#device::before {
+    content: "Large Laptops";
+}
+
+@media only screen and (max-width: 1200px) {
+    body {
+        background-color: #A18594;
+    }
+    #device::before {
+        content: "Laptop";
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    body {
+        background-color: #474A51;
+    }
+    #device::before {
+        content: "Tablet";
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-color: #F80000;
+    }
+    #device::before {
+        content: "Large Phone";
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: #252850;
+    }
+    #device::before {
+        content: "Phone";
+    }
+}
